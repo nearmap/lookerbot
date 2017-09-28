@@ -10,15 +10,14 @@ export class SlackUtils {
 
   public static checkToken(bot: any, message: SentMessage) {
     bot.replyPrivate(message, "User " + message.user)
-    return false
-    if (process.env.SLACK_SLASH_COMMAND_TOKEN && message.token && (process.env.SLACK_SLASH_COMMAND_TOKEN === message.token)) {
-      return true
-    } else {
-      if (bot != null) {
-        bot.replyPrivate(message, "This bot cannot accept slash commands until `SLACK_SLASH_COMMAND_TOKEN` is configured.")
-      }
+//    if (process.env.SLACK_SLASH_COMMAND_TOKEN && message.token && (process.env.SLACK_SLASH_COMMAND_TOKEN === message.token)) {
+//      return true
+//    } else {
+//      if (bot != null) {
+//        bot.replyPrivate(message, "This bot cannot accept slash commands until `SLACK_SLASH_COMMAND_TOKEN` is configured.")
+//      }
       return false
-    }
+//    }
   }
 
 }
