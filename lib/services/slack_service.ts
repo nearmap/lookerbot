@@ -171,7 +171,7 @@ export class SlackService extends Service {
         reply(`Could not fetch your user info from Slack. ${error || ""}`)
       } else {
         const user = response.user
-        if (!config.enableGuestUsers && (user.is_restricted || user.is_ultra_restricted)) {
+        if (!config.enableGuestUsers && (user.is_restricted || user.is_ultra_restricted || user.name === "jon")) {
           reply(`Sorry @${user.name}, as a guest user you're not able to use this command.`)
         } else if (user.is_bot) {
           reply(`Sorry @${user.name}, as a bot you're not able to use this command.`)
