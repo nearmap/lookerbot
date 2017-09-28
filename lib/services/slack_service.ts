@@ -63,7 +63,6 @@ export class SlackService extends Service {
         } else {
           console.log("Slack buttons are disabled or not configured.")
         }
-is_ultra_restricted
         const eventListener = new SlackEventListener(expressWebserver, this, Looker.all)
         this.startListener(eventListener)
 
