@@ -9,7 +9,7 @@ export class SlackUtils {
   }
 
   public static checkToken(bot: any, message: SentMessage) {
-    bot.replyPrivate(message, "User " + message.user)
+    bot.replyPrivate(message, "User " + message.user.name)
 //    if (process.env.SLACK_SLASH_COMMAND_TOKEN && message.token && (process.env.SLACK_SLASH_COMMAND_TOKEN === message.token)) {
 //      return true
 //    } else {
