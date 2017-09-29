@@ -170,7 +170,7 @@ export class SlackService extends Service {
         reply(`Could not fetch your user info from Slack. ${error || ""}`)
       } else {
         const user = response.user
-        if (config.slackUsers != undefined && config.slackUsers.split(',').indexOf(user.name) >= 0) {
+        if (config.slackUsers != undefined && config.slackUsers.split(',').indexOf(user.name) > -1) {
           console.log("test" + config.slackUsers.split(',').indexOf(user.name))
           reply(`Sorry @${user.name} you are not able to use this command.`)
         } else if (!config.enableGuestUsers && (user.is_restricted || user.is_ultra_restricted)) {
