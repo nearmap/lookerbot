@@ -9,7 +9,7 @@ const config = {
   npmPackage: require("./../package.json"),
   slackApiKey: process.env.SLACK_API_KEY,
   unsafeLocalDev: process.env.UNSAFE_LOCAL_DEV === "true",
-  slackUsers: process.env.SLACK_USER_LIST.split(','),
+  slackUsers: process.env.SLACK_USER_LIST.split(',') | undefined,
 }
 
 if (config.unsafeLocalDev) {
