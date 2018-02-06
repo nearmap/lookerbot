@@ -14,7 +14,7 @@ export class DashboardQueryRunner extends QueryRunner {
     this.filters = filters
   }
 
-  protected showShareUrl() { return true }
+  protected showShareUrl() { return false }
 
   protected async work() {
     const elements = this.dashboard.dashboard_elements || this.dashboard.elements
