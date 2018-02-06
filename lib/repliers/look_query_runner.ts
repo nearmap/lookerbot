@@ -16,7 +16,7 @@ export class LookQueryRunner extends QueryRunner {
     this.filterInfo = filterInfo
   }
 
-  protected showShareUrl() { return true }
+  protected showShareUrl() { return false }
 
   protected linkText(shareUrl: string) {
     if (this.loadedLook) {
