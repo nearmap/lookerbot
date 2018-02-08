@@ -40,7 +40,7 @@ export class SlackTableFormatter {
   public format(): Message {
 
     const result = this.result
-    const shareUrl = this.options.shareUrl
+    const shareUrl = ""//this.options.shareUrl
     const visType = this.query.vis_config ? this.query.vis_config.type : undefined
 
     if (result.pivots) {
